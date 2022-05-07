@@ -50,8 +50,9 @@ public class fibWithAndWithoutMemoization {
         if (memo.containsKey(n)){
             return memo.get(n);
         }
-        memo.put(n, (long)fibWithMemo((n-1), memo) +  fibWithMemo((n-2), memo));
-        return fibWithMemo((n-1), memo) +  fibWithMemo((n-2), memo);
+        long result = (long)fibWithMemo((n-1), memo) +  fibWithMemo((n-2), memo);
+        memo.put(n, result);
+        return result;
 
     }
     public static long fib(long n) {

@@ -39,6 +39,10 @@ public class LongestCommonSubsequence {
     }
 
     static int LCS(String s1, String s2, int i, int j, HashMap<String, Integer> memo){
+        /*
+        * this needs to be reevaluated since im making to many recursive calls when 'unwinding' the call stack
+        *   I already have calculated the value, so I don't need to start winding again once at the last return statement.
+        */
         String pos = i + "," + j;
         if (i == -1 || j == -1) { //base case that s1 or s2 has reached the beginning of string
             return 0;
