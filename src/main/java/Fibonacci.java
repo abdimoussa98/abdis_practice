@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 
-public class fibWithAndWithoutMemoization {
+public class Fibonacci {
     public static void main(String[] args){
 
     StopWatch watch = new StopWatch();
